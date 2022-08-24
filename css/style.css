@@ -1,3 +1,242 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33D1CC;
+  --yellow-color: #ffc400;
+  --red-color: #ff3150;
+  --section-color: #EFF7FA;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+/* $$$$$$$$$$$ Start Component $$$$$$$$$$$$ */
+/*Start main btn */
+.main-btn {
+  color: var(--yellow-color);
+}
+
+.main-btn,
+.main-btn:focus,
+.main-btn:hover {
+  background: var(--red-color);
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+/*End main btn */
+/*Start main Title */
+.main-title::after {
+  content: '';
+  width: 120px;
+  height: 2px;
+  background: var(--green-color);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*End main Title */
+/* $$$$$$$$$$$ End Component $$$$$$$$$$$$ */
+
+/* ----------------- Start Navbar -----------------  */
+.navbar {
+  background-color: var(--dark-color);
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--green-color);
+}
+
+.navbar .search {
+  border-left: 1px solid var(--green-color);
+}
+
+.navbar .search svg {
+  color: var(--green-color);
+}
+
+.navbar .navbar-toggler {
+  color: #fff;
+  font-size: 25px;
+  border-color: #fff;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* ----------------- End Navbar -----------------  */
+/* ----------------- Start Landing -----------------  */
+.landing {
+  background: var(--dark-color);
+  min-height: calc(100vh - 72px);
+}
+
+/* ----------------- End Landing -----------------  */
+/* ----------------- Start features -----------------  */
+.features .icon-holder {
+  height: 200px;
+}
+
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features .icon-holder .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+
+.features .icon-holder .icon {
+  color: var(--green-color);
+}
+
+.features .feat h4 {
+  color: var(--yellow-color);
+}
+
+/* ----------------- End features -----------------  */
+/* ----------------- Start Work -----------------  */
+.our-work {
+  background-color: var(--section-color);
+}
+
+.our-work ul .active {
+  background: var(--red-color);
+  color: var(--yellow-color);
+}
+
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.our-work ul li:not(.active):hover {
+  color: var(--red-color);
+}
+
+.our-work .box {
+  overflow: hidden;
+  position: relative;
+}
+
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background: #33d1cca3;
+  width: calc(100% - 0.5rem);
+  height: calc(100% - 0.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.5rem;
+  transform: translateX(calc(-100% - 0.25rem));
+  transition: 0.3s ease-in-out;
+}
+
+.our-work .box:hover::before {
+  transform: translate(0);
+}
+
+/* ----------------- End Work -----------------  */
+/* ----------------- Start stuff -----------------  */
+.stuff .desc {
+  max-width: 31rem;
+}
+
+/* ----------------- End stuff -----------------  */
+/* ----------------- Start Team -----------------  */
+.team {
+  background-color: var(--section-color);
+}
+
+.team h2 {
+  color: var(--yellow-color);
+}
+
+.team .box h4 {
+  background-color: var(--green-color);
+}
+
+
+/* ----------------- End Team -----------------  */
+/* ----------------- Start Project -----------------  */
+.project {
+  background-color: var(--dark-color);
+}
+
+/* ----------------- End Project -----------------  */
+/* ----------------- tart Subscribe -----------------  */
+.subscribe {
+  background-color: var(--yellow-color);
+}
+
+.subscribe input[type="text"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+}
+
+.subscribe input[type="text"]:focus {
+  outline: none;
+}
+
+.subscribe input[type="text"]::placeholder {
+  color: #fff;
+}
+
+.subscribe input[type="submit"] {
+  background-color: var(--dark-color);
+}
+
+.subscribe input[type="submit"]:hover {
+  color: var(--yellow-color);
+}
+
+/* ----------------- End Subscribe -----------------  */
+/* ----------------- Start Footer -----------------  */
+footer {
+  background-color: var(--dark-color);
+}
+
+footer .copyright>span {
+  color: var(--green-color);
+}
+
+footer .copyright div span {
+  color: var(--yellow-color);
+}
+
+footer .contact ul li svg {
+  width: 20px;
+  height: 20px;
+}
+
+footer .contact ul li .facebook {
+  background: #1877f2;
+}
+
+footer .contact ul li .twitter {
+  background: #1da1f2;
+}
+
+footer .contact ul li .linkedin {
+  background: #0077b5;
+}
+
+footer .contact ul li .instagram {
+  background: #e1306c;
+}
+
+/* ----------------- End Footer -----------------  */
